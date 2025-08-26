@@ -1,0 +1,280 @@
+/* ==============================
+   RESET
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==============================
+   LAYOUT DASAR
+============================== */
+body {
+  display: flex;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* ==============================
+   SIDEBAR
+============================== */
+.sidebar {
+  width: 230px;
+  background: #2f3542;
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  color: #dcdde1;
+  text-decoration: none;
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #57606f;
+  color: #fff;
+}
+
+/* ==============================
+   MAIN AREA
+============================== */
+.main {
+  flex-grow: 1;
+  padding: 25px;
+}
+
+.header {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2f3542;
+}
+
+/* ==============================
+   CARD & FORM
+============================== */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  max-width: 2000px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #2f3542;
+}
+ 
+#kolomtambah {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ced6e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+form input:focus, 
+form textarea:focus {
+  border: 1px solid #1e90ff;
+  outline: none;
+}
+
+.old-file {
+  margin-top: 10px;
+}
+
+/* ==============================
+   TOMBOL
+============================== */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  margin-right: 6px;
+}
+
+.btn-blue  { background: #1e90ff; }
+.btn-blue:hover  { background: #0069d9; }
+
+.btn-red   { background: #d61f2e; }
+.btn-red:hover   { background: #ff394a; }
+
+.btn-green { background: #2ecc71; }
+.btn-green:hover { background: #27ae60; }
+
+.btn-yellow { background: #f1c40f; color: #ffffff; }
+.btn-yellow:hover { background: #d4ac0d; color: #fff; }
+
+/* ==============================
+   TABEL
+============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  table-layout: fixed;
+}
+
+table thead {
+  background: #2c3e50;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+/* Efek Hover Tabel */
+table tr:hover {
+  background: #7a7a7a;
+  transition: 0.2s;
+}
+
+/* Tombol Di dalam Tabel */
+table td .btn {
+  margin: 2px;
+  padding: 6px 12px;
+  font-size: 13px;;
+  border-radius: 5px;
+}
+
+/* Biar Teks Ketengah */
+table th {
+  text-align: center;
+}
+
+/* ==============================
+   UPLOAD FILE
+============================== */
+input[type="file"] {
+  display: none; 
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  max-width: 400px;
+}
+
+/* Tombol File */
+.file-upload label {
+  background-color: #8d8d8d;
+  color: #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.file-upload label:hover {
+  background-color: #717271;
+}
+
+/* Nama File */
+.file-upload span {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==============================
+   FILTER FORM
+============================== */
+.filter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#kolomtambah [type="text"],
+.filter-form button {
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  height: 38px;
+}
+
+.filter-form select{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced6e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+#cari-surat{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced6e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.filter-form button {
+  padding: 8px 16px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-form button:hover {
+  background: #0069d9;
+}
